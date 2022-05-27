@@ -1,0 +1,10 @@
+version: 2
+
+models: 
+  - name: dim_products
+    columns:
+     - name: productid
+     - name: name
+     - name: productnumber
+     - name: color
+    
