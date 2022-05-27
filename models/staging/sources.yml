@@ -209,3 +209,21 @@ sources:
          - name: description
          - name: minqty
          - name: enddate
+
+      - name: person_person
+        columns:
+         - name: lastname
+         - name: persontype
+         - name: namestyle
+         - name: suffix
+         - name: modifieddate
+         - name: rowguid
+         - name: _sdc_table_version
+         - name: emailpromotion
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: title
+         - name: businessentityid
+         - name: _sdc_batched_at
+         - name: firstname
+         - name: middlename
