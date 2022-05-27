@@ -1,0 +1,1 @@
+SELECT * FROM {{source('adventureworks','sales_salesorderheadersalesreason')}}
