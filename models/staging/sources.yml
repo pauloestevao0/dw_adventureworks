@@ -1,18 +1,19 @@
 version: 2
 
-sources:
+sources: 
   - name: adventureworks
-    description: Esse é a réplica do banco de dados Postgre da AdventureWorks
+    schema: adventureworks
+    description: Esta é a réplica do Postgre da Adventureworks
     tables:
       - name: sales_countryregioncurrency
         columns:
-         - name: currencycode
-         - name: countryregioncode
-         - name: modifieddate
-         - name: _sdc_sequence
-         - name: _sdc_table_version
-         - name: _sdc_received_at
-
+          - name: currencycode
+          - name: countryregioncode
+          - name: modifieddate
+          - name: _sdc_sequence
+          - name: _sdc_table_version
+          - name: _sdc_received_at
+    
       - name: sales_creditcard
         columns:
          - name: cardtype
@@ -21,7 +22,6 @@ sources:
          - name: _sdc_table_version
          - name: expmonth
          - name: _sdc_received_at
-         - name: 
 
       - name: sales_currency
         columns:
@@ -32,7 +32,6 @@ sources:
          - name: _sdc_table_version
          - name: _sdc_received_at
          - name: _sdc_batched_at
-
 
       - name: sales_currencyrate
         columns:
