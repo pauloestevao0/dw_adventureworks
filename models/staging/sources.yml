@@ -227,3 +227,34 @@ sources:
          - name: _sdc_batched_at
          - name: firstname
          - name: middlename
+
+      - name: production_product
+        columns:
+         - name: sellenddate
+         - name: safetystocklevel
+         - name: finishedgoodsflag
+         - name: class
+         - name: makeflag
+         - name: productnumber
+         - name: reorderpoint
+         - name: modifieddate
+         - name: rowguid
+         - name: productmodelid
+         - name: weightunitmeasurecode
+         - name: standardcost
+         - name: name
+         - name: _sdc_table_version
+         - name: style
+         - name: sizeunitmeasurecode
+         - name: productid
+         - name: productsubcategoryid
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: listprice
+         - name: daystomanufacture
+         - name: productline
+         - name: size
+         - name: _sdc_batched_at
+         - name: color
+         - name: sellstartdate
+         - name: weight
