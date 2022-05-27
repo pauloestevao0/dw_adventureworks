@@ -1,0 +1,212 @@
+version: 2
+
+sources:
+  - name: adventureworks
+    description: Esse é a réplica do banco de dados Postgre da AdventureWorks
+    tables:
+      - name: sales_countryregioncurrency
+        columns:
+         - name: currencycode
+         - name: countryregioncode
+         - name: modifieddate
+         - name: _sdc_sequence
+         - name: _sdc_table_version
+         - name: _sdc_received_at
+
+      - name: sales_creditcard
+        columns:
+         - name: cardtype
+         - name: expyear
+         - name: modifieddate
+         - name: _sdc_table_version
+         - name: expmonth
+         - name: _sdc_received_at
+         - name: 
+
+      - name: sales_currency
+        columns:
+         - name: currencycode
+         - name: modifieddate
+         - name: name
+         - name: _sdc_sequence
+         - name: _sdc_table_version
+         - name: _sdc_received_at
+         - name: _sdc_batched_at
+
+
+      - name: sales_currencyrate
+        columns:
+         - name: endofdayrate
+         - name: tocurrencycode
+         - name: modifieddate
+         - name: _sdc_table_version
+         - name: currencyratedate
+         - name: currencyrateid
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: fromcurrencycode
+         - name: averagerate
+         - name: _sdc_batched_at
+
+      - name: sales_customer
+        columns:
+         - name: personid
+         - name: modifieddate
+         - name: rowguid
+         - name: _sdc_table_version
+         - name: territoryid
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: storeid
+         - name: customerid
+         - name: _sdc_batched_at
+
+      - name: sales_personcreditcard
+        columns:
+         - name: modifieddate
+         - name: creditcardid
+         - name: businessentityid
+         - name: _sdc_sequence
+         - name: _sdc_table_version
+         - name: _sdc_received_at
+         - name: _sdc_batched_at
+
+      - name: sales_salesorderdetail
+        columns:
+         - name: orderqty
+         - name: salesorderid
+         - name: salesorderdetailid
+         - name: unitprice
+         - name: specialofferid
+         - name: modifieddate
+         - name: rowguid
+         - name: _sdc_table_version
+         - name: productid
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: _sdc_batched_at
+         - name: carriertrackingnumber
+         - name: unitpricediscount
+
+      - name: sales_salesorderheader
+        columns:
+         - name: purchaseordernumber
+         - name: shipmethodid
+         - name: salesorderid
+         - name: billtoaddressid
+         - name: salespersonid
+         - name: modifieddate
+         - name: rowguid
+         - name: taxamt
+         - name: shiptoaddressid
+         - name: onlineorderflag
+         - name: _sdc_table_version
+         - name: territoryid
+         - name: status
+         - name: currencyrateid
+         - name: orderdate
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: creditcardapprovalcode
+         - name: subtotal
+         - name: creditcardid
+         - name: revisionnumber
+         - name: freight
+         - name: duedate
+         - name: totaldue
+         - name: customerid
+         - name: shipdate
+         - name: _sdc_batched_at
+         - name: accountnumber
+
+      - name: sales_salesorderheadersalesreason
+        columns:
+         - name: salesorderid
+         - name: modifieddate
+         - name: salesreasonid
+         - name: _sdc_sequence
+         - name: _sdc_received_at
+         - name: _sdc_batched_at
+
+      - name: sales_salesperson
+        columns:
+         - name: salesquota
+         - name: modifieddate
+         - name: rowguid
+         - name: _sdc_table_version
+         - name: territoryid
+         - name: bonus
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: businessentityid
+         - name: _sdc_batched_at
+         - name: salesytd
+
+      - name: sales_salesreason
+        columns:
+         - name: reasontype
+         - name: modifieddate
+         - name: name
+         - name: salesreasonid
+         - name: _sdc_sequence
+         - name: _sdc_table_version
+         - name: _sdc_received_at
+         - name: _sdc_batched_at
+
+      - name: sales_salestaxrate
+        columns:
+         - name: stateprovinceid
+         - name: modifieddate
+         - name: rowguid
+         - name: name
+         - name: _sdc_table_version
+         - name: taxrate
+         - name: salestaxrateid
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: taxtype
+         - name: _sdc_batched_at
+
+      - name: sales_salesterritory
+        columns:
+         - name: group
+         - name: countryregioncode
+         - name: modifieddate
+         - name: rowguid
+         - name: saleslastyear
+         - name: name
+         - name: _sdc_table_version
+         - name: territoryid
+         - name: _sdc_sequence
+         - name: _sdc_batched_at
+
+      - name: sales_shoppingcartitem
+        columns:
+         - name: datecreated
+         - name: modifieddate
+         - name: _sdc_table_version
+         - name: quantity
+         - name: productid
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: shoppingcartitemid
+         - name: shoppingcartid
+         - name: _sdc_batched_at
+
+      - name: sales_specialoffer
+        columns:
+         - name: specialofferid
+         - name: startdate
+         - name: maxqty
+         - name: modifieddate
+         - name: rowguid
+         - name: _sdc_table_version
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: type
+         - name: discountpct
+         - name: category
+         - name: _sdc_batched_at
+         - name: description
+         - name: minqty
+         - name: enddate
