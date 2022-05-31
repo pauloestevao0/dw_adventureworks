@@ -39,6 +39,10 @@ with
      select *
      from {{ref('stg_salesperson')}}
 )
+, countryregion as(
+     select *
+     from {{ref('stg_countryregion')}}
+)
 , complete as (
     select 
         customers.customerid
@@ -48,7 +52,7 @@ with
         , territory.territoryid
         , personaddress.city
         , stateprovince.name as state
-        , territory.name as country
+        , countryregion.name as country
 
     from customers
     left join person on customers.customerid = person.businessentityid
@@ -59,6 +63,7 @@ with
     left join businessentityadress on person.businessentityid = businessentityadress.businessentityid
     left join personaddress on businessentityadress.addressid = personaddress.addressid
     left join stateprovince on personaddress.stateprovinceid = stateprovince.stateprovinceid
+    left join countryregion on stateprovince.countryregioncode = countryregion.countryregioncode
 )
 
 select * from complete
