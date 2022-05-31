@@ -1,0 +1,13 @@
+version: 2
+
+models: 
+  - name: dim_customers
+    columns:
+     - name: customerid
+     - name: businessentityid
+     - name: customername
+     - name: cardtype
+     - name: territoryid
+     - name: city
+     - name: state
+     - name: country
