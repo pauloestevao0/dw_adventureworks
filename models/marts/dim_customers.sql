@@ -38,10 +38,11 @@ with
 , complete as (
     select 
         customers.customerid
-        , person.personid
+        , person.businessentityid
+        , concat(person.firstname,' ',person.lastname)
 
     from customers
-    left join person on customers.personid = person.personid
+    left join person on customers.customerid = person.businessentityid
     
 )
 
