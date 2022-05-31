@@ -311,3 +311,13 @@ sources:
          - name: isonlystateprovinceflag
          - name: _sdc_batched_at
          - name: stateprovincecode
+
+      - name: person_countryregion
+        columns:
+         - name: countryregioncode
+         - name: modifieddate
+         - name: name
+         - name: _sdc_sequence
+         - name: _sdc_table_version
+         - name: _sdc_received_at
+         - name: _sdc_batched_at
