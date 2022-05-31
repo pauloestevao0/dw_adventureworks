@@ -21,20 +21,28 @@ with
 )
 , businessentity as(
      select *
-     from {{ref('stg_personcreditcard')}}
+     from {{ref('stg_businessentity')}}
+)
+, address as(
+     select *
+     from {{ref('stg_address')}}
+)
+, businessentityadress as(
+     select *
+     from {{ref('stg_businessentityaddress')}}
+)
+, stateprovince as(
+     select *
+     from {{ref('stg_stateprovince')}}
 )
 , complete as (
     select 
-        orders.salesorderid
-        , orders.orderdate
-        , details.orderqty
-        , details.salesorderdetailid
-        , details.unitprice
-        , details.productid
-        , reason.salesreasonid
-    from orders
-    left join details on orders.salesorderid = details.salesorderid
-    left join reason on orders.salesorderid = reason.salesorderid
+        customers.customerid
+        , person.personid
+
+    from customers
+    left join person on customers.personid = person.personid
+    
 )
 
 select * from complete
