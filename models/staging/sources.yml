@@ -259,7 +259,7 @@ sources:
          - name: sellstartdate
          - name: weight
 
-      - name: person_adress
+      - name: person_address
         columns:
          - name: stateprovinceid
          - name: city
