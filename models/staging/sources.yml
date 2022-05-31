@@ -258,3 +258,56 @@ sources:
          - name: color
          - name: sellstartdate
          - name: weight
+
+      - name: person_adress
+        columns:
+         - name: stateprovinceid
+         - name: city
+         - name: addressline2
+         - name: modifieddate
+         - name: rowguid
+         - name: _sdc_table_version
+         - name: postalcode
+         - name: spatiallocation
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: addressline1
+         - name: _sdc_batched_at
+         - name: addressid
+
+      - name: person_businessentity
+        columns:
+         - name: modifieddate
+         - name: rowguid
+         - name: businessentityid
+         - name: _sdc_sequence
+         - name: _sdc_table_version
+         - name: _sdc_received_at
+         - name: _sdc_batched_at
+
+      - name: person_businessentityaddress
+        columns:
+         - name: modifieddate
+         - name: rowguid
+         - name: _sdc_table_version
+         - name: addresstypeid
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: businessentityid
+         - name: _sdc_batched_at
+         - name: addressid
+
+      - name: person_stateprovince
+        columns:
+         - name: stateprovinceid
+         - name: countryregioncode
+         - name: modifieddate
+         - name: rowguid
+         - name: name
+         - name: _sdc_table_version
+         - name: territoryid
+         - name: _sdc_received_at
+         - name: _sdc_sequence
+         - name: isonlystateprovinceflag
+         - name: _sdc_batched_at
+         - name: stateprovincecode
