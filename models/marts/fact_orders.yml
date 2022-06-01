@@ -4,6 +4,7 @@ models:
   - name: fact_orders
     columns:
      - name: salesorderid
+     - name: customerid
      - name: orderdate
      - name: creditcardid
      - name: orderqty
