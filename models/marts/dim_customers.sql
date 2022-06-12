@@ -59,11 +59,11 @@ with
     left join personcreditcard on person.businessentityid = personcreditcard.businessentityid
     left join creditcard on personcreditcard.creditcardid = creditcard.creditcardid
     left join salesperson on person.businessentityid = salesperson.businessentityid
-    left join territory on salesperson.territoryid = territory.territoryid
+    left join territory on customers.territoryid = territory.territoryid
     left join businessentityadress on person.businessentityid = businessentityadress.businessentityid
-    left join personaddress on businessentityadress.addressid = personaddress.addressid
-    left join stateprovince on personaddress.stateprovinceid = stateprovince.stateprovinceid
+    left join stateprovince on territory.territoryid = stateprovince.territoryid
     left join countryregion on stateprovince.countryregioncode = countryregion.countryregioncode
+    left join personaddress on stateprovince.stateprovinceid = personaddress.stateprovinceid
 )
 
 select * from complete
