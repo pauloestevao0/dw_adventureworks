@@ -49,7 +49,6 @@ with
         , person.businessentityid
         , concat(person.firstname,' ',person.lastname) as customername
         , creditcard.cardtype
-        , territory.territoryid
         , personaddress.city
         , stateprovince.name as state
         , countryregion.name as country
