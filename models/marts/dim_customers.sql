@@ -55,7 +55,7 @@ with
         , countryregion.name as country
 
     from customers
-    left join person on customers.customerid = person.businessentityid
+    left join person on customers.personid = person.businessentityid
     left join personcreditcard on person.businessentityid = personcreditcard.businessentityid
     left join creditcard on personcreditcard.creditcardid = creditcard.creditcardid
     left join salesperson on person.businessentityid = salesperson.businessentityid
