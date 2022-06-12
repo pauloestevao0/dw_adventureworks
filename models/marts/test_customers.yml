@@ -1,7 +1,7 @@
 version: 2
 
 models: 
-  - name: dim_customers
+  - name: test_customers
     columns:
      - name: customerid
      - name: businessentityid
