@@ -25,6 +25,11 @@ with
      from {{ref('stg_person')}}
 )
 
+, creditcard as (
+     select *
+     from {{ref('stg_creditcard')}}
+)
+
 , complete as (
     select 
         orders.salesorderid
@@ -38,6 +43,7 @@ with
         , reason.salesreasonid
         , salesreason.name as reasonname
         , person.businessentityid
+        , creditcard.cardtype
 
     from orders
     left join details on orders.salesorderid = details.salesorderid
@@ -45,6 +51,7 @@ with
     left join salesreason on reason.salesreasonid = salesreason.salesreasonid
     left join customer on orders.customerid = customer.customerid
     left join person on customer.personid = person.businessentityid
+    left join creditcard on orders.creditcardid = creditcard.creditcardid
 )
 
 select * from complete
