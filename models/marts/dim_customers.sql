@@ -23,10 +23,6 @@ with
      select *
      from {{ref('stg_address')}}
 )
-, businessentityadress as(
-     select *
-     from {{ref('stg_businessentityaddress')}}
-)
 , stateprovince as(
      select *
      from {{ref('stg_stateprovince')}}
