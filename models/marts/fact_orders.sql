@@ -37,6 +37,7 @@ with
         , details.productid
         , reason.salesreasonid
         , salesreason.name as reasonname
+        , person.businessentityid
 
     from orders
     left join details on orders.salesorderid = details.salesorderid

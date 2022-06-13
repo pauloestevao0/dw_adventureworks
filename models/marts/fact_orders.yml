@@ -14,3 +14,4 @@ models:
      - name: productid
      - name: salesreasonid
      - name: customerid
+     - name: businessentityid
