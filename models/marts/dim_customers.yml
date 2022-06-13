@@ -7,7 +7,6 @@ models:
      - name: businessentityid
      - name: customername
      - name: cardtype
-     - name: territoryid
      - name: city
      - name: state
      - name: country
