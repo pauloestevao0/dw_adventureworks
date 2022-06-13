@@ -20,6 +20,11 @@ with
      from {{ref('stg_salesreason')}}
 )
 
+, person as(
+     select *
+     from {{ref('stg_person')}}
+)
+
 , complete as (
     select 
         orders.salesorderid
@@ -37,6 +42,8 @@ with
     left join details on orders.salesorderid = details.salesorderid
     left join reason on orders.salesorderid = reason.salesorderid
     left join salesreason on reason.salesreasonid = salesreason.salesreasonid
+    left join customer on orders.customerid = customer.customerid
+    left join person on customer.personid = person.businessentityid
 )
 
 select * from complete
