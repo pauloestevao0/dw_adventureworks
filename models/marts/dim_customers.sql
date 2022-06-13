@@ -4,25 +4,39 @@ with
         FROM {{ref('stg_customer')}}
     )
 
-    , person as(
+    , person as (
      select *
      from {{ref('stg_person')}}
 )
 
-, territory as(
-     select *
-     from {{ref('stg_salesterritory')}}
+, businessentityaddress as (
+    select *
+    from {{ref('stg_businessentityaddress')}}
+)
+
+, address as (
+    select *
+    from{{ref('stg_address')}}
+)
+
+, stateprovince as (
+    select *
+    from {{ref('stg_stateprovince')}}
 )
 
 , customerinfos as (
     select
         customers.customerid
         , customers.personid
-        , territory.territoryid
+        , customers.territoryid
+        , person.businessentityid
+        , businessentityaddress.addressid
+        , address.city
 
 from customers
 left join person on customers.personid = person.businessentityid
-left join territory on customers.territoryid = territory.territoryid
+left join businessentityaddress on person.businessentityid = businessentityaddress.businessentityid
+left join address on businessentityaddress.addressid = address.addressid
 )
 
 select * from customerinfos
