@@ -24,6 +24,7 @@ with
     select 
         orders.salesorderid
         , orders.customerid
+        , customer.personid
         , orders.orderdate
         , details.orderqty
         , details.salesorderdetailid

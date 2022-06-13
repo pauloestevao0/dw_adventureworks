@@ -5,6 +5,7 @@ models:
     columns:
      - name: salesorderid
      - name: customerid
+     - name: personid
      - name: orderdate
      - name: creditcardid
      - name: orderqty

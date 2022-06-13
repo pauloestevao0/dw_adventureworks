@@ -3,8 +3,10 @@ version: 2
 models: 
   - name: dim_customers
     columns:
-     - name: productid
-     - name: name
-     - name: productnumber
-     - name: color
-    
+     - name: customerid
+     - name: businessentityid
+     - name: customername
+     - name: cardtype
+     - name: city
+     - name: state
+     - name: country
