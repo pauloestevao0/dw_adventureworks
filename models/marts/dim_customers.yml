@@ -1,0 +1,13 @@
+version: 2
+
+models: 
+  - name: dim_customers
+    columns:
+     - name: customerid
+     - name: personid
+     - name: businessentityid
+     - name: addressid
+     - name: city
+     - name: state
+     - name: country
+     - name: customername

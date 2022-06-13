@@ -1,0 +1,18 @@
+version: 2
+
+models: 
+  - name: fact_orders
+    columns:
+     - name: salesorderid
+     - name: customerid
+     - name: personid
+     - name: orderdate
+     - name: creditcardid
+     - name: orderqty
+     - name: salesorderdetailid
+     - name: unitprice
+     - name: productid
+     - name: salesreasonid
+     - name: customerid
+     - name: businessentityid
+     - name: cardtype
