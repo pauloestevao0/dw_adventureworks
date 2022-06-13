@@ -4,4 +4,9 @@ with
         FROM {{ref('stg_customer')}}
     )
 
-select customers.customerid from customers
+    , person as(
+     select *
+     from {{ref('stg_person')}}
+)
+
+select * from person
