@@ -37,7 +37,7 @@ with
         , person.businessentityid
         , businessentityaddress.addressid
         , address.city
-        , stateprovince.name as statename
+        , stateprovince.name as state
         , countryregion.name as country
         , concat (person.firstname,' ',person.lastname) as customername
 
