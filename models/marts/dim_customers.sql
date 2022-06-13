@@ -9,4 +9,9 @@ with
      from {{ref('stg_person')}}
 )
 
-select * from person
+, territory as(
+     select *
+     from {{ref('stg_salesterritory')}}
+)
+
+select * from territory
