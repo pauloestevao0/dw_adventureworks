@@ -33,7 +33,6 @@ with
     select distinct
         customers.customerid
         , customers.personid
-        , customers.territoryid
         , person.businessentityid
         , businessentityaddress.addressid
         , address.city
