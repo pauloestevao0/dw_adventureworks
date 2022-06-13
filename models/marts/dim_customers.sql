@@ -39,6 +39,7 @@ with
         , address.city
         , stateprovince.name as statename
         , countryregion.name as country
+        , concat (person.firstname,' ',person.lastname) as customername
 
 from customers
 left join person on customers.personid = person.businessentityid
