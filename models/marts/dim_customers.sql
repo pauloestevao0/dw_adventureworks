@@ -32,11 +32,13 @@ with
         , person.businessentityid
         , businessentityaddress.addressid
         , address.city
+        , stateprovince.name as statename
 
 from customers
 left join person on customers.personid = person.businessentityid
 left join businessentityaddress on person.businessentityid = businessentityaddress.businessentityid
 left join address on businessentityaddress.addressid = address.addressid
+left join stateprovince on address.stateprovinceid = stateprovince.stateprovinceid
 )
 
 select * from customerinfos
