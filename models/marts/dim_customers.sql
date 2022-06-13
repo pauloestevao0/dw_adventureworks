@@ -24,8 +24,13 @@ with
     from {{ref('stg_stateprovince')}}
 )
 
+, countryregion as (
+    select *
+    from {{ref('stg_countryregion')}}
+)
+
 , customerinfos as (
-    select
+    select distinct
         customers.customerid
         , customers.personid
         , customers.territoryid
@@ -33,12 +38,14 @@ with
         , businessentityaddress.addressid
         , address.city
         , stateprovince.name as statename
+        , countryregion.name as country
 
 from customers
 left join person on customers.personid = person.businessentityid
 left join businessentityaddress on person.businessentityid = businessentityaddress.businessentityid
 left join address on businessentityaddress.addressid = address.addressid
 left join stateprovince on address.stateprovinceid = stateprovince.stateprovinceid
+left join countryregion on stateprovince.countryregioncode = countryregion.countryregioncode
 )
 
 select * from customerinfos
