@@ -50,7 +50,6 @@ with
     left join personcreditcard on person.businessentityid = personcreditcard.businessentityid
     left join creditcard on personcreditcard.creditcardid = creditcard.creditcardid
     left join territory on customers.territoryid = territory.territoryid
-    left join businessentityadress on person.businessentityid = businessentityadress.businessentityid
     left join stateprovince on territory.territoryid = stateprovince.territoryid
     left join countryregion on stateprovince.countryregioncode = countryregion.countryregioncode
     left join personaddress on stateprovince.stateprovinceid = personaddress.stateprovinceid
