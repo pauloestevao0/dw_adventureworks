@@ -19,10 +19,6 @@ with
      select *
      from {{ref('stg_creditcard')}}
 )
-, businessentity as(
-     select *
-     from {{ref('stg_businessentity')}}
-)
 , personaddress as(
      select *
      from {{ref('stg_address')}}
@@ -34,10 +30,6 @@ with
 , stateprovince as(
      select *
      from {{ref('stg_stateprovince')}}
-)
-, salesperson as(
-     select *
-     from {{ref('stg_salesperson')}}
 )
 , countryregion as(
      select *
@@ -57,7 +49,6 @@ with
     left join person on customers.personid = person.businessentityid
     left join personcreditcard on person.businessentityid = personcreditcard.businessentityid
     left join creditcard on personcreditcard.creditcardid = creditcard.creditcardid
-    left join salesperson on person.businessentityid = salesperson.businessentityid
     left join territory on customers.territoryid = territory.territoryid
     left join businessentityadress on person.businessentityid = businessentityadress.businessentityid
     left join stateprovince on territory.territoryid = stateprovince.territoryid
