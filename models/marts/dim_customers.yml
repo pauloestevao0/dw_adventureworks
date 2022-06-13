@@ -3,8 +3,8 @@ version: 2
 models: 
   - name: dim_customers
     columns:
-     - name: customerid
      - name: businessentityid
+     - name: customerid
      - name: customername
      - name: cardtype
      - name: city

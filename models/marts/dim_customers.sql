@@ -11,14 +11,14 @@ with
      select *
      from {{ref('stg_salesterritory')}}
 )
---, personcreditcard as(
-  --   select *
-    -- from {{ref('stg_personcreditcard')}}
---)
---, creditcard as(
-  --   select *
-    -- from {{ref('stg_creditcard')}}
---)
+, personcreditcard as(
+     select *
+     from {{ref('stg_personcreditcard')}}
+)
+, creditcard as(
+     select *
+     from {{ref('stg_creditcard')}}
+)
 , personaddress as(
      select *
      from {{ref('stg_address')}}
@@ -33,20 +33,19 @@ with
 )
 , complete as (
     select 
-        customers.customerid
-        , person.businessentityid
+        person.businessentityid
+        , customers.customerid
         , concat(person.firstname,' ',person.lastname) as customername
-        --, creditcard.cardtype
+        , creditcard.cardtype
         , personaddress.city
         , stateprovince.name as state
         , countryregion.name as country
 
     from customers
     left join person on customers.personid = person.businessentityid
-    --left join personcreditcard on person.businessentityid = personcreditcard.businessentityid
-    --left join creditcard on personcreditcard.creditcardid = creditcard.creditcardid
-    left join territory on customers.territoryid = territory.territoryid
-    left join stateprovince on territory.territoryid = stateprovince.territoryid
+    left join personcreditcard on person.businessentityid = personcreditcard.businessentityid
+    left join creditcard on personcreditcard.creditcardid = creditcard.creditcardid
+    left join stateprovince on customers.territoryid = stateprovince.territoryid
     left join countryregion on stateprovince.countryregioncode = countryregion.countryregioncode
     left join personaddress on stateprovince.stateprovinceid = personaddress.stateprovinceid
 )
