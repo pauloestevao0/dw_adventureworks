@@ -14,4 +14,15 @@ with
      from {{ref('stg_salesterritory')}}
 )
 
-select * from territory
+, customerinfos as (
+    select
+        customers.customerid
+        , customers.personid
+        , territory.territoryid
+
+from customers
+left join person on customers.personid = person.businessentityid
+left join territory on customers.territoryid = territory.territoryid
+)
+
+select * from customerinfos
